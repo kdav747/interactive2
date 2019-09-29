@@ -1,0 +1,44 @@
+main {
+
+}
+
+body {font-family: Arial, sans-serif;
+    font-weight: 900;
+    font-style: normal;
+    color: #3d3935;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: grid;
+    align-items: center;
+    justify-items: center;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    height: 200px;
+    width: 150px;
+    background-color: #fcb44a;
+    float: left;
+    margin-left: 10px;
+    font-size: 60px;
+    display: grid;
+    align-items: center;
+    text-align: center;
+    transition: transform 200ms;
+}
+
+a:link, a:visited {
+    text-decoration: none;
+    color: white;
+}
+
+li:hover {
+    color: #fcb44a;
+    transform: scale(1.08);
+
+}

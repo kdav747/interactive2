@@ -1,0 +1,66 @@
+body {font-family: Arial, sans-serif;
+    font-weight: 900;
+    font-style: normal;
+    color: #fcb44a;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: grid;
+    align-items: center;
+    justify-items: center;
+}
+
+a:link {
+    font-family: helvetica;
+    color: black;
+    text-decoration: none;
+}
+
+a:hover {
+    color: blue !important;
+}
+
+#orb {
+    width: 200px;
+    height: 200px;
+    background: #fcb44a;
+    border-radius: 50%;
+    animation: makebigger infinite 1s alternate;
+  }
+
+  #orb:hover {
+    animation-play-state: paused;
+  }
+
+  @keyframes makebigger {
+      0% {
+          transform: scale(1);
+      }
+      100% {
+          transform: scale(1.2);
+      }
+  }
+
+  #moon {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    box-shadow: 25px 25px 0 0 #fcb44a;
+    animation: makebigger infinite .5s alternate;
+  }
+
+  #moon:hover {
+    animation-play-state: paused;
+  }
+
+  @keyframes makebigger {
+      0% {
+          transform: scale(1);
+      }
+      100% {
+          transform: scale(1.2);
+      }
+  }
+h1 {
+
+}
