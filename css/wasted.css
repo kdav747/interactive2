@@ -89,6 +89,21 @@ body {font-family: Arial, sans-serif;
   margin-top: 5px;
 }
 
+#line_6 {
+  width: 100px;
+  height: 2px;
+  background: #fcb44a;
+  margin-top: 60px;
+  margin-left: 430px;
+}
+
+#text_6 {
+  color: black;
+  font-weight: 300;
+  margin-left: 510px;
+  margin-top: 5px;
+}
+
 a:link {
     font-family: helvetica;
     color: black;
