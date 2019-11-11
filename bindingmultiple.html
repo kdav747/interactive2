@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Binding Multiple Events</title>
+	<style type="text/css">
+		div {
+			width: 200px;
+			height: 200px;
+			background: blue;
+		}
+	</style>
+</head>
+<body>
+
+<div></div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+<script>
+	
+	$("div").on({
+		mouseenter: function(){
+			$(this).css({"background":"red"});
+		},
+		mouseleave: function(){
+			$(this).css({"background":"yellow"});
+		},
+		click: function(){
+			$(this).slideUp(200).slideDown(1500);
+		},
+
+	});
+
+</script>
+</body>
+</html>
