@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Chaining in JQuery</title>
+    <style type="text/css">
+        body {
+            display: grid;
+            align-items: center;
+            justify-items: center;
+            height: 100vh;
+        }
+
+        #box {
+            width: 200px;
+            height: 200px;
+            background: blue;
+        }
+
+    </style>
+    <!-- ENDS     -->
+    </head>
+    <body>
+
+        <div id="box"> </div>
+        <!-- jQuery Library -->
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+        <!-- JS -->
+        <script type="text/javascript">
+            $("#box").mouseleave(function(){
+            
+            $(this).slideUp(2000).slideDown(500).
+                fadeOut(1000).fadeIn(10);
+            });
+        </script>
+
+    </body>
+</html>

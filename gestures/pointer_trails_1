@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script class="jsbin" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+<meta charset=utf-8 />
+<title>Colored Trails by Motyar</title>
+<!--[if IE]>
+  <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+<style>
+  article, aside, figure, footer, header, hgroup, 
+  menu, nav, section { display: block; }
+  .drawingpix	{ 
+
+	position:absolute; 
+
+	top:-50px; 
+
+	left:-50px;
+
+}
+</style>
+</head>
+<body>
+  <p id="hello">Color trail by <a href="http://motyar.blogspot.com">Motyar</a></p>
+</body>
+</html>

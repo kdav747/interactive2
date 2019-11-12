@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>jQuery UI Slider - Colorpicker</title>
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <link rel="stylesheet" href="/resources/demos/style.css">
+  <style>
+  #red, #green, #blue {
+    float: left;
+    clear: left;
+    width: 300px;
+    height: 25px;
+    margin: 5px;
+  }
+
+  #slider-red, #slider-green, #slider-blue {
+      height: 25px;
+      width: 25px;
+      background: white;
+  }
+  
+
+  #swatch {
+    width: 120px;
+    height: 100px;
+    margin-top: 18px;
+    margin-left: 350px;
+    background-image: none;
+  }
+
+  #red { background: #ef2929; }
+  #red { border-color: #ef2929; }
+  #green { background: #8ae234; }
+  #green { border-color: #8ae234; }
+  #blue { background: #729fcf; }
+  #blue { border-color: #729fcf; }
+  </style>
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script -->
+        src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js" -->
+        integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" -->
+        crossorigin="anonymous"> -->
+    </script>  
+  <script>
+    
+    $ (function() {
+        $( "#slider-red" ).draggable({ containment: "#red" });
+        $( "#slider-green" ).draggable({ containment: "#green" });
+        $( "#slider-blue" ).draggable({ containment: "#blue" });
+    });
+  $( function() {
+    function hexFromRGB(r, g, b) {
+      var hex = [
+        r.toString( 16 ),
+        g.toString( 16 ),
+        b.toString( 16 )
+      ];
+      $.each( hex, function( nr, val ) {
+        if ( val.length === 1 ) {
+          hex[ nr ] = "0" + val;
+        }
+      });
+
+      return hex.join( "" ).toUpperCase();
+    }
+    function refreshSwatch() {
+      var red = $( "#slider-red" ).slider( "value" ),
+        green = $( "#slider-green" ).slider( "value" ),
+        blue = $( "#slider-blue" ).slider( "value" ),
+        hex = hexFromRGB( red, green, blue );
+      $( "#swatch" ).css( "background-color", "#" + hex );
+    }
+ 
+    $( "#slider-red, #slider-green, #slider-blue" ).slider({
+      orientation: "horizontal",
+      range: "min",
+      max: 255,
+      value: 127,
+      slide: refreshSwatch,
+      change: refreshSwatch
+    });
+    $( "#slider-red" ).slider( "value", 255 )
+    $( "#slider-green" ).slider( "value", 140 )
+    $( "#slider-blue" ).slider( "value", 60 )
+
+} );
+  </script>
+</head>
+<body class="ui-widget-content" style="border:0;">
+ 
+<p class="ui-state-default ui-corner-all ui-helper-clearfix" style="padding:4px;">
+  <span class="ui-icon ui-icon-pencil" style="float:left; margin:-2px 5px 0 0;"></span>
+</p>
+ 
+<div id="red">
+    <div id="slider-red"></div>
+</div>
+<div id="green">
+    <div id="slider-green"></div>
+</div>
+<div id="blue">
+    <div id="slider-blue"></div>
+</div>
+ 
+<div id="swatch" class="ui-widget-content ui-corner-all"></div>
+ 
+ 
+</body>
+</html>

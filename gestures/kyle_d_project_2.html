@@ -1,0 +1,648 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Kyle D Project 2</title>
+    <style type="text/css">
+        body {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            grid-template-rows: 30px 150px 150px 150px 2000px;
+            grid-gap: 20px;
+            height: 65vh;
+            background-color: #3D3935;
+            font-family: poppins, sans-serif;
+
+            font-weight: 800;
+
+            font-style: normal;
+            color: #ff595a;
+            margin: 60px;
+            margin-left: 100px;
+        }
+
+        #box {
+            margin-top: 200px;
+            padding-top: 10px;
+            padding-left: 40px;
+            background:#3D3935;
+            height: 300px;
+            width: 100px;
+            margin-left: 6px;
+            border: none;
+            grid-row: 2;
+            grid-column: 1
+        }
+        
+        /* start buttons */
+
+        #bigbtn1, #btnr1, #btnr2, #btnr3, #btng1, #btng2, #btng3, #btny1, #btny2, #btny3, #btnb1, #btnb2, #btnp1, #btnp2, #btnp3, :focus{
+            outline: none;
+        }
+
+
+        #btnr1, #btnr2, #btnr3, #btng1, #btng2, #btng3, #btny1, #btny2, #btny3, #btnb1, #btnb2, #btnb3, #btnp1, #btnp2, #btnp3, #btnbr1, #btnbr2, #btnbr3, #btne1, #btne2, #btne3, #btnu1, #btnu2, #btnu3{
+            background:white;
+            height:18px;
+            width:18px;
+            margin:6px;
+            border: none;
+            cursor: pointer;
+        }
+
+        #refresh-button {
+            background:#ff595a;
+            height:30px;
+            width:87px;
+            padding: 0px;
+            text-align: center;
+            margin-left: 50px;
+            border: none;
+            grid-row: 3;
+            grid-column: 1;
+            color: white;
+            font-size: 14px;
+            letter-spacing: 1px;
+            text-align: center;
+            padding-top: 5px;
+            font-weight: 800;
+            cursor: pointer;
+        }
+
+        #bigbtn1, #bigbtn2, #bigbtn3 {
+            background:#ff595a;
+            height:20px;
+            width:87px;
+            margin:6px;
+            padding: 0px;
+            text-align: center;
+            border: none;
+            cursor: pointer;
+        }
+
+        #bigbtn1, #bigbtn2, #bigbtn3 {
+            color: white;
+            font-size: 14px;
+            letter-spacing: 1px;
+            text-align: center;
+            font-weight: 800;
+        }
+
+        #panel{
+            background:white;
+            height:20px;
+            width:87px;
+            margin:6px;
+            border: none;
+            text-align: center;
+            display: none;  
+        }
+
+        /* end buttons */
+
+
+        #texttween {
+		    margin: 50px;
+		    width: 500px;
+		    height: 200px;
+            color: white;
+	}
+		#texttween #text {
+			font-size: 15px;
+		}
+
+
+        /* start circles */
+
+        #circ1 {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            background: #ff595a;
+            grid-row: 2;
+            grid-column: 2;
+            cursor: pointer;
+        }
+
+        #circ2 {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            background: #79dea8;
+            grid-row: 2;
+            grid-column: 3;
+            cursor: pointer;
+        }
+
+        #circ3 {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            background: #ffb548;
+            grid-column: 4;
+            grid-row: 2;
+            cursor: pointer;
+        }
+
+        #circ4 {
+            background: #1ecad3;
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            grid-column: 2;
+            grid-row: 3;
+            cursor: pointer;
+        }
+
+        #circ5 {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            background: #8093dc;
+            grid-row: 3;
+            grid-column: 3;
+            cursor: pointer;
+        }
+
+        #circ6 {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            background: #794039;
+            grid-row: 3;
+            grid-column: 4;
+            cursor: pointer;
+        }
+
+        #triangle-up {
+            width: 0;
+            height: 0;
+            border-left: 70px solid transparent;
+            border-right: 70px solid transparent;
+            border-bottom: 140px solid #8093dc;
+            grid-column: 2;
+            grid-row: 4;
+            cursor: pointer;
+        }
+
+
+
+        #heart {
+            position: relative;
+            width: 100px;
+            height: 90px;
+            grid-column: 3;
+            grid-row: 4;
+            left: -20px;
+            cursor: pointer;
+        }
+        #heart:before,
+        #heart:after {
+            position: absolute;
+            content: "";
+            left: 90px;
+            top: 0;
+            width: 90px;
+            height: 140px;
+            background: #ff595a;;
+            border-radius: 50px 50px 0 0;
+            transform: rotate(-45deg);
+            transform-origin: 0 100%;
+        }
+        #heart:after {
+            left: 0;
+            transform: rotate(45deg);
+            transform-origin: 100% 100%;
+        }
+
+        #infinity {
+            position: relative;
+            width: 212px;
+            height: 100px;
+            box-sizing: content-box;
+            grid-column: 4;
+            grid-row: 4;
+            left: -35px;
+            top: 10px;
+            cursor: pointer;
+        }
+        #infinity:before,
+        #infinity:after {
+            content: "";
+            box-sizing: ;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 60px;
+            height: 60px;
+            border: 20px solid #ffb548;
+            border-radius: 50px 50px 0 50px;
+            transform: rotate(-45deg);
+        }
+        #infinity:after {
+            left: auto;
+            right: 0;
+            border-radius: 50px 50px 50px 0;
+            transform: rotate(45deg);
+        }
+
+
+        #egg {
+            display: block;
+            width: 126px;
+            height: 180px;
+            background-color: #1ecad3;
+            border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+            grid-column: 2;
+            grid-row: 5;
+            cursor: pointer;
+        }
+
+        
+        #triangle-bottomright {
+            width: 0;
+            height: 0;
+            border-bottom: 150px solid #794039;
+            border-left: 150px solid transparent;
+            grid-column: 3;
+            grid-row: 5;
+            cursor: pointer;
+        }
+
+
+        #star-five {
+            margin: 50px 0;
+            position: relative;
+            display: block;
+            color: #79dea8;
+            width: 0px;
+            height: 0px;
+            border-right: 100px solid transparent;
+            border-bottom: 70px solid #79dea8;
+            border-left: 100px solid transparent;
+            transform: rotate(35deg);
+            grid-column: 4;
+            grid-row: 5;
+            left: -20px;
+            cursor: pointer;
+        }
+        #star-five:before {
+            border-bottom: 80px solid #79dea8;
+            border-left: 30px solid transparent;
+            border-right: 30px solid transparent;
+            position: absolute;
+            height: 0;
+            width: 0;
+            top: -45px;
+            left: -65px;
+            display: block;
+            content: '';
+            transform: rotate(-35deg);
+        }
+        #star-five:after {
+            position: absolute;
+            display: block;
+            color: #79dea8;
+            top: 3px;
+            left: -105px;
+            width: 0px;
+            height: 0px;
+            border-right: 100px solid transparent;
+            border-bottom: 70px solid #79dea8;
+            border-left: 100px solid transparent;
+            transform: rotate(-70deg);
+            content: '';
+        }
+  
+  
+  
+
+        /* end circles */
+
+    </style>
+    <!-- ENDS     -->
+    </head>
+    <body>
+            <div id="texttween">
+                    <span id="text1">This site is meant to help you detach from the work you're struggling with at the moment</span>
+                    <span id="text2">and attempt to provide a short distraction from your own brain</span>
+                    <span id="text3">that still involves using shapes and creation to keep the mind focused on creating</span>
+                    <span id="text4">but doing so in a state of play so you can relax <br> and create.</span>
+                    </div>
+        <div id="refresh-button">refresh</div>        
+        <div id="box">
+            <button id="btnr1"></button>
+            <button id="btnr2"></button>
+            <button id="btnr3"></button>
+            <button id="btng1"></button>
+            <button id="btng2"></button>
+            <button id="btng3"></button>
+            <div id="panel">BOO!</div>
+            <button id="btny1"></button>
+            <button id="btny2"></button>
+            <button id="btny3"></button>
+            <button id="btnb1"></button>
+            <button id="btnb2"></button>
+            <button id="btnb3"></button>
+            <div id="panel">BOO!</div>
+            <button id="btnp1"></button>
+            <button id="btnp2"></button>
+            <button id="btnp3"></button>
+            <button id="btnbr1"></button>
+            <button id="btnbr2"></button>
+            <button id="btnbr3"></button>
+            <button id="bigbtn1">switch</button>
+            <button id="bigbtn2">+</button>
+            <button id="bigbtn3">–</button>
+            <div id="panel">BOO!</div>
+        </div>
+
+        <div id="circ1"></div>
+        <div id="circ2"></div>
+        <div id="circ3"></div>
+        <div id="circ4"></div>
+        <div id="circ5"></div>
+        <div id="circ6"></div>
+
+       <!-- draggable stuff -->
+        <div id="heart"></div>
+        <div id="triangle-up"></div>
+        <div id="infinity"></div>
+        <div id="egg"></div>
+        <div id="triangle-bottomright"></div>
+        <div id="star-five"></div>
+
+
+        <!-- jQuery Library -->
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script
+        src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"
+        integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU="
+        crossorigin="anonymous">
+        </script> 
+    
+        <!-- JS -->
+        <script type="text/javascript">  
+
+    $(document).ready(function(){
+        $("#bigbtn2").click(function(){
+            $("#text1, #text2, #text3, #text4").animate({letterSpacing: "+=10px"});
+    });
+        $("#bigbtn3").click(function(){
+            $("#text1, #text2, #text3, #text4").animate({letterSpacing: "-=10px"});
+        });
+    });
+
+    $(document).ready(function(){
+        $("#refresh-button").click(function(){
+            location.reload(true);
+        });
+    });
+
+    $("#btnr1, #btnr2, #btnr3").on({
+		mouseenter: function(){
+			$(this).css({"background":"#ff595a"});
+		},
+		mouseleave: function(){
+			$(this).css({"background":"white"});
+		},
+		click: function(){
+			$(this).slideUp(50).slideDown(50);
+		},
+
+	});
+
+    $("#btng1, #btng2, #btng3").on({
+		mouseenter: function(){
+			$(this).css({"background":"#79dea8"});
+		},
+		mouseleave: function(){
+			$(this).css({"background":"white"});
+		},
+		click: function(){
+			$(this).slideUp(50).slideDown(50);
+		},
+
+	});
+
+
+    $("#bigbtn1, #bigbtn2, #bigbtn3").on({
+		mouseenter: function(){
+			$(this).css({"opacity":"0.2"});
+		},
+		mouseleave: function(){
+			$(this).css({"opacity":"1"});
+		},
+
+	});
+
+    $("#btny1, #btny2, #btny3").on({
+		mouseenter: function(){
+			$(this).css({"background":"#ffb548"});
+		},
+		mouseleave: function(){
+			$(this).css({"background":"white"});
+		},
+		click: function(){
+			$(this).slideUp(50).slideDown(50);
+		},
+
+	});
+
+    $("#btnb1, #btnb2, #btnb3").on({
+		mouseenter: function(){
+			$(this).css({"background":"#1ecad3"});
+		},
+		mouseleave: function(){
+			$(this).css({"background":"white"});
+		},
+		click: function(){
+			$(this).slideUp(50).slideDown(50);
+		},
+
+	});
+
+    $("#btnp1, #btnp2, #btnp3").on({
+		mouseenter: function(){
+			$(this).css({"background":"#8093dc"});
+		},
+		mouseleave: function(){
+			$(this).css({"background":"white"});
+		},
+		click: function(){
+			$(this).slideUp(50).slideDown(50);
+		},
+
+	});
+
+    $("#btnbr1, #btnbr2, #btnbr3").on({
+		mouseenter: function(){
+			$(this).css({"background":"#794039"});
+		},
+		mouseleave: function(){
+			$(this).css({"background":"white"});
+		},
+		click: function(){
+			$(this).slideUp(50).slideDown(50);
+		},
+
+	});
+
+    $("#btny4").on({
+		mouseenter: function(){
+			$(this).css({"background":"#ffb548"});
+		},
+		mouseleave: function(){
+			$(this).css({"background":"white"});
+		},
+		click: function(){
+			$(this).slideUp(50).slideDown(50);
+		},
+
+	});
+
+    // red
+
+        $(document).ready(function(){
+        $("#btnr1").click(function(){
+         $("#circ1").animate({height: "600px"});
+    });
+        $("#btnr1").click(function(){
+         $("#circ1").animate({width: "600px"});
+    });
+        $("#btnr1").click(function(){
+         $("#circ1").animate({height: "300px"});
+    });
+        $("#btnr1").click(function(){
+         $("#circ1").animate({
+             width: "300px",
+             mixblendMode: "multiply",
+             borderRadius: "20%"
+             });
+    });
+        $("#btnr2").click(function(){
+         $("#circ1").animate({marginTop: "+=300px"});
+    });
+        $("#btnr2").click(function(){
+         $("#circ1").animate({
+            marginTop: "-=300px",
+            width: "120px",
+            height: "120px",
+            borderRadius: "50%"
+            });
+    });
+
+        $("#btnr3").click(function(){
+         $("#circ1").animate({
+            marginLeft: "+=600px",
+            width: "100px",
+            height: "100px",
+            borderTop: "50px",
+            borderLeft: "100px",
+            borderBottom: "50px"
+            });
+    });
+        $("#btnr3").click(function(){
+         $("#circ1").animate({
+            marginLeft: "-=600px",
+            width: "120px",
+            height: "120px",
+            borderRadius: "50%"
+         });
+    });
+
+    // green
+
+        $("#btng1").click(function(){
+         $("#circ2").animate({marginRight: "+=600px"});
+    });
+        $("#btng1").click(function(){
+         $("#circ2").animate({marginRight: "-=600px"});
+    });
+        $("#btng2").click(function(){
+         $("#circ2").animate({opacity: "0.2"});
+    });
+        $("#btng2").click(function(){
+         $("#circ2").animate({opacity: "1"});
+    });
+        $("#btng3").click(function(){
+        $("#circ2").animate({
+        left: '250px',
+        opacity: '0.5',
+        height: '0px',
+        width: '0px'
+        });
+    });
+        $("#btng3").click(function(){
+        $("#circ2").animate({
+        right: '250px',
+        opacity: '1',
+        height: "400px",
+        width: "500px",
+        borderRadius: "400px /200px" 
+        });
+    });
+
+    // yellow
+
+        $("#btny1").click(function(){
+         $("#circ3").animate({
+            opacity: "0.2",
+            width: "200px",
+            height: "600px",
+            borderRight: "60px solid transparent",
+            borderTop: "60px",
+            borderLeft: "60px",
+            borderBottom: "60px",
+            borderTopLeftRadius: "60px",
+            borderTopRightRadius: "60px",
+            borderBottomLeftRadius: "60px",
+            borderBottomRightRadius: "60px"
+            });
+    });
+        $("#btny1").click(function(){
+         $("#circ3").animate({opacity: "1"});
+    });
+        $("#btny2").click(function(){
+         $("#circ3").animate({
+            opacity: ".5"
+            });
+    });
+        $("#btny3").click(function(){
+         $("#circ3").animate({opacity: "1"});
+    });
+    });
+
+         $("#bigbtn1").click(function(){
+         $("#circ1, #circ2, #circ3, #circ4, #circ5, #circ6, #heart, #triangle-up, #infinity, #egg, #triangle-bottomright, #star-five").animate({
+             opacity: '0.5',
+             height: '0px',
+             width: '0px'
+             });
+        });
+
+        $("#bigbtn1").click(function(){
+         $("#circ1, #circ2, #circ3, #circ4, #circ5, #circ6, #heart, #triangle-up, #infinity, #egg, #triangle-bottomright, #star-five").animate({
+             opacity: '1',
+             height: '120px',
+             width: '120px'
+             });
+        });
+
+
+    // draggable stuff
+
+    $("#circ1, #circ2, #circ3, #circ4, #circ5, #circ6, #triangle-up, #heart, #infinity, #egg, #triangle-bottomright, #star-five, #refresh-button").on({
+		mouseenter: function(){
+			$(this).css({opacity: ".7"});
+		},
+		mouseleave: function(){
+			$(this).css({opacity: "1"});
+		},
+
+	});
+
+    $("#triangle-up, #heart, #infinity, #egg, #circ1, #circ2, #circ3, #circ4, #circ5, #circ6, #triangle-bottomright, #star-five, #refresh-button").draggable();
+
+    </script>
+    </body>
+</html>

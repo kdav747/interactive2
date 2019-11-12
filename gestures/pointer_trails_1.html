@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset=utf-8 />
+<title>Color Trails!</title>
+<!--[if IE]>
+  <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+<style>
+  article, aside, figure, footer, header, hgroup, 
+  menu, nav, section { display: block; }
+  .drawingpix	{ 
+
+	position:absolute; 
+
+	top:-50px; 
+
+	left:-50px;
+
+}
+</style>
+
+<script class="jsbin" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+
+<script type="text/javascript">
+$(document).ready(function() {
+  
+    $(document).mousemove(
+          function(e){
+                   pointer = $('<span>.</span>').attr({'class': 'drawingpix'});
+  
+      $(document.body).append(pointer);
+              var color = Math.round(0xffffff *Math.random()).toString(16);
+                   
+                    pointer.css({	
+              width:'10px',
+              height:'10px',
+              opacity: 0.4,
+              'background-color':'#'+color,
+              'border-radius':'2000px',
+              '-moz-border-radius': '2000px',	
+              '-webkit-border-radius': '2000px',
+              'z-index':-1,	
+              top: e.pageY,//offsets
+              left: e.pageX //offsets	
+          }).show().animate({
+                  height:'600px',
+                  width:'600px',
+                  'border-radius':'600px',
+                  '-moz-border-radius': '600px',
+                  '-webkit-border-radius': '600px',
+                  opacity: 0,
+                  top: e.pageY-300,	//offsets
+                  left: e.pageX-300
+                      
+          }, 2000, function(){ 
+              $(this).remove(); 
+              });
+                     });
+  
+  });
+</script>
+</head>
+<body>
+  <p id="hello">Pointer Trails!</p>
+</body>
+</html>

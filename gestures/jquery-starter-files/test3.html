@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Test</title>  
+
+    	<!-- jquery -->
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script src="./assets/js/script.js"></script>  
+	<style type="text/css">
+        .title {
+            border-bottom: 1px solid #3d3935;
+            padding: 20px;
+            cursor: pointer;
+
+        }
+        .title:hover {
+            background-color: #ffb548;
+        }
+        .content {
+            display: none;
+            padding: 20px;
+            border-bottom: 1px solid #3d3935;
+        }
+	</style>
+</head>
+
+<body>
+
+    <div class="week">
+        <div class="title">Week 1</div>
+        <div class="content">
+            This is week 1, I can't wait until I can afford to live closer to my job...
+        </div>
+    </div>
+    
+    <div class="week">
+        <div class="title">Week 2</div>
+        <div class="content">
+            I need more fiber in my life and I love grits so this works.
+        </div>
+    </div>
+
+    <div class="week">
+        <div class="title">Week 3</div>
+        <div class="content">
+            This be week 3 my G 
+        </div>
+    </div>
+
+
+
+<!-- Scripts -->
+<script type="text/javascript">
+    $(".title").click(function(){
+        $(this).parents(".week").find(".content").slideToggle();
+    });
+</script>
+
+</body>
+</html>

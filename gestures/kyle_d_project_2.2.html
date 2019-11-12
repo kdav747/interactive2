@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Kyle D Project 2</title>
+    <style type="text/css">
+        body {
+            display: grid;
+            grid-template-columns: .8fr 1fr 1fr 1fr;
+            grid-template-rows: 150px;
+            grid-gap: 20px;
+            height: 65vh;
+            background-color: #3d3935;
+            font-family: poppins, sans-serif;
+
+            font-weight: 800;
+
+            font-style: normal;
+            color: #ff595a;
+            margin: 60px;
+            margin-left: 100px;            
+        }
+
+        #box {
+            padding-top: 10px;
+            padding-left: 2px;
+            background:white;
+            height:600px;
+            width:100px;
+            margin:6px;
+            border: none;
+        }
+        
+        /* start buttons */
+
+        #bigbtn1, #btnr1, #btnr2, #btnr3, #btng1, #btng2, #btng3, #btny1, #btny2, #btny3, #btnb1, #btnb2, #btnp1, #btnp2, #btnp3, :focus{
+            outline: none;
+        }
+
+
+        #btnr1, #btnr2, #btnr3, #btng1, #btng2, #btng3, #btny1, #btny2, #btny3, #btnb1, #btnb2, #btnb3, #btnp1, #btnp2, #btnp3, #btnbr1, #btnbr2, #btnbr3, #btne1, #btne2, #btne3, #btnu1, #btnu2, #btnu3{
+            background:#3d3935;
+            height:18px;
+            width:18px;
+            margin:6px;
+            border: none;
+        }
+
+
+        #bigbtn1, #bigbtn2, #bigbtn3 {
+            background:#ff595a;
+            height:20px;
+            width:87px;
+            margin:6px;
+            padding: 0px;
+            text-align: center;
+            border: none;
+        }
+
+        #panel{
+            background:white;
+            height:20px;
+            width:87px;
+            margin:6px;
+            border: none;
+            text-align: center;
+            display: none;  
+        }
+
+        /* end buttons */
+
+        /* start circles */
+
+        #circ1 {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            background: #ff595a;
+        }
+        #circ2 {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            background: #79dea8;
+        }
+        #circ3 {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            background: #ffb548;
+            grid-column: 4;
+        }
+
+        #circ4 {
+            background: #1ecad3;
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            grid-column: 2;
+        }
+
+        #circ5 {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            background: #8093dc;
+        }
+        #circ6 {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            background: #794039;
+        }
+
+        /* end circles */
+
+    </style>
+    <!-- ENDS     -->
+    </head>
+    <body>
+        <div id="box">
+            <button id="btnr1"></button>
+            <button id="btnr2"></button>
+            <button id="btnr3"></button>
+            <button id="btng1"></button>
+            <button id="btng2"></button>
+            <button id="btng3"></button>
+            <button id="bigbtn1"></button>
+            <div id="panel">BOO!</div>
+            <button id="btny1"></button>
+            <button id="btny2"></button>
+            <button id="btny3"></button>
+            <button id="btnb1"></button>
+            <button id="btnb2"></button>
+            <button id="btnb3"></button>
+            <button id="bigbtn2"></button>
+            <div id="panel">BOO!</div>
+            <button id="btnp1"></button>
+            <button id="btnp2"></button>
+            <button id="btnp3"></button>
+            <button id="btnbr1"></button>
+            <button id="btnbr2"></button>
+            <button id="btnbr3"></button>
+            <button id="btne1"></button>
+            <button id="btne2"></button>
+            <button id="btne3"></button>
+            <button id="btnu1"></button>
+            <button id="btnu2"></button>
+            <button id="btnu3"></button>
+            <button id="bigbtn3"></button>
+            <div id="panel">BOO!</div>
+        </div>
+
+        <div id="circ1"></div>
+        <div id="circ2"></div>
+        <div id="circ3"></div>
+        <div id="circ4"></div>
+        <div id="circ5"></div>
+        <div id="circ6"></div>
+
+        <!-- jQuery Library -->
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+         
+    
+        <!-- JS -->
+        <script type="text/javascript">
+
+    $("#btnr1, #btnr2, #btnr3").on({
+		mouseenter: function(){
+			$(this).css({"background":"#ff595a"});
+		},
+		mouseleave: function(){
+			$(this).css({"background":"#3d3935"});
+		},
+		click: function(){
+			$(this).slideUp(50).slideDown(50);
+		},
+
+	});
+
+    $("#btng1, #btng2, #btng3").on({
+		mouseenter: function(){
+			$(this).css({"background":"#79dea8"});
+		},
+		mouseleave: function(){
+			$(this).css({"background":"#3d3935"});
+		},
+		click: function(){
+			$(this).slideUp(50).slideDown(50);
+		},
+
+	});
+
+
+    $("#bigbtn1, #bigbtn2, #bigbtn3").on({
+		mouseenter: function(){
+			$(this).css({"opacity":"0.2"});
+		},
+		mouseleave: function(){
+			$(this).css({"opacity":"1"});
+		},
+
+	});
+
+    $("#btny1, #btny2, #btny3").on({
+		mouseenter: function(){
+			$(this).css({"background":"#ffb548"});
+		},
+		mouseleave: function(){
+			$(this).css({"background":"#3d3935"});
+		},
+		click: function(){
+			$(this).slideUp(50).slideDown(50);
+		},
+
+	});
+
+    $("#btnb1, #btnb2, #btnb3").on({
+		mouseenter: function(){
+			$(this).css({"background":"#1ecad3"});
+		},
+		mouseleave: function(){
+			$(this).css({"background":"#3d3935"});
+		},
+		click: function(){
+			$(this).slideUp(50).slideDown(50);
+		},
+
+	});
+
+    $("#btnp1, #btnp2, #btnp3").on({
+		mouseenter: function(){
+			$(this).css({"background":"#8093dc"});
+		},
+		mouseleave: function(){
+			$(this).css({"background":"#3d3935"});
+		},
+		click: function(){
+			$(this).slideUp(50).slideDown(50);
+		},
+
+	});
+
+    $("#btnbr1, #btnbr2, #btnbr3").on({
+		mouseenter: function(){
+			$(this).css({"background":"#794039"});
+		},
+		mouseleave: function(){
+			$(this).css({"background":"#3d3935"});
+		},
+		click: function(){
+			$(this).slideUp(50).slideDown(50);
+		},
+
+	});
+
+    $("#btny4").on({
+		mouseenter: function(){
+			$(this).css({"background":"#ffb548"});
+		},
+		mouseleave: function(){
+			$(this).css({"background":"#3d3935"});
+		},
+		click: function(){
+			$(this).slideUp(50).slideDown(50);
+		},
+
+	});
+
+    // red
+
+        $(document).ready(function(){
+        $("#btnr1").click(function(){
+         $("#circ1").animate({height: "600px"});
+    });
+        $("#btnr1").click(function(){
+         $("#circ1").animate({width: "600px"});
+    });
+        $("#btnr1").click(function(){
+         $("#circ1").animate({height: "300px"});
+    });
+        $("#btnr1").click(function(){
+         $("#circ1").animate({
+             width: "300px",
+             mixblendMode: "multiply"
+             });
+    });
+        $("#btnr2").click(function(){
+         $("#circ1").animate({marginTop: "+=300px"});
+    });
+        $("#btnr3").click(function(){
+         $("#circ1").animate({
+             marginLeft: "+=600px",
+             height: "30px",
+             width: "30px",
+             borderRadius: "10%"
+             });
+    });
+
+    // green
+
+        $("#btng1").click(function(){
+         $("#circ2").animate({marginRight: "+=600px"});
+    });
+        $("#btng1").click(function(){
+         $("#circ2").animate({marginRight: "-=600px"});
+    });
+        $("#btng2").click(function(){
+         $("#circ2").animate({opacity: "0.2"});
+    });
+        $("#btng2").click(function(){
+         $("#circ2").animate({opacity: "1"});
+    });
+        $("#btng3").click(function(){
+        $("#circ2").animate({
+        left: '250px',
+        opacity: '0.5',
+        height: '0px',
+        width: '0px',
+        borderRadius: "70%"
+        });
+    });
+        $("#btng3").click(function(){
+        $("#circ2").animate({
+        right: '250px',
+        opacity: '1',
+        height: '550px',
+         width: '550px'
+        });
+    });
+
+    // yellow
+
+        $("#btny1").click(function(){
+         $("#circ3").animate({opacity: "0.2"});
+    });
+        $("#btny1").click(function(){
+         $("#circ3").animate({opacity: "1"});
+    });
+        $("#btny3").click(function(){
+         $("#circ3").animate({opacity: "1"});
+    });
+    });
+
+         $("#bigbtn1").click(function(){
+         $("#circ1, #circ2, #circ3, #circ4, #circ5, #circ6").animate({
+             opacity: '0.5',
+             height: '0px',
+             width: '0px'
+             });
+        });
+
+        $("#bigbtn1").click(function(){
+         $("#circ1, #circ2, #circ3, #circ4, #circ5, #circ6").animate({
+             opacity: '1',
+             height: '120px',
+             width: '120px'
+             });
+        });
+
+        $("#bigbtn2").click(function(){
+         $("#circ1, #circ2, #circ3, #circ4, #circ5, #circ6").animate({
+             opacity: '0.2',
+             height: '600px',
+             width: '5000px'
+             });
+        });
+
+        $("#bigbtn2").click(function(){
+         $("#circ1, #circ2, #circ3, #circ4, #circ5, #circ6").animate({
+             opacity: '1',
+             height: '165px',
+             width: '165px'
+             });
+        });
+
+        $("#bigbtn3").click(function(){
+         $("#circ1, #circ2, #circ3, #circ4, #circ5, #circ6").animate({
+            marginTop: "+=1200px",
+             });
+        });
+
+        $("#bigbtn3").click(function(){
+         $("#circ1, #circ2, #circ3, #circ4, #circ5, #circ6").animate({
+                marginTop: "-=1200px",
+                height: "400px",
+                width: "400px"
+             });
+        });
+
+        $("#circ1").on({
+		mouseenter: function(){
+			$(this).css({"background":"white"});
+		},
+		mouseleave: function(){
+			$(this).css({"background":"#ff595a"});
+		},
+		click: function(){
+			$(this).slideUp(200).slideDown(300);
+		},
+
+	}); 
+
+        $("#circ2").on({
+		mouseenter: function(){
+			$(this).css({"background":"white"});
+		},
+		mouseleave: function(){
+			$(this).css({"background":"#79dea8"});
+		},
+		click: function(){
+			$(this).slideUp(200).slideDown(300);
+		},
+
+	}); 
+
+        $("#circ3").on({
+		mouseenter: function(){
+			$(this).css({"background":"white"});
+		},
+		mouseleave: function(){
+			$(this).css({"background":"#ffb548"});
+		},
+		click: function(){
+			$(this).slideUp(200).slideDown(300);
+		},
+
+	}); 
+
+            $("#circ4").on({
+		mouseenter: function(){
+			$(this).css({"background":"white"});
+		},
+		mouseleave: function(){
+			$(this).css({"background":"#1ecad3"});
+		},
+		click: function(){
+			$(this).slideUp(200).slideDown(300);
+		},
+
+	});
+
+        $("#circ5").on({
+		mouseenter: function(){
+			$(this).css({"background":"white"});
+		},
+		mouseleave: function(){
+			$(this).css({"background":"#8093dc"});
+		},
+		click: function(){
+			$(this).slideUp(200).slideDown(300);
+		},
+
+	});
+
+        $("#circ6").on({
+		mouseenter: function(){
+			$(this).css({"background":"white"});
+		},
+		mouseleave: function(){
+			$(this).css({"background":"#794039"});
+		},
+		click: function(){
+			$(this).slideUp(200).slideDown(300);
+		},
+
+	});
+
+    </script>
+    </body>
+</html>
