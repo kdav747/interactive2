@@ -1,0 +1,837 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Cello You Got a Bass</title>
+        <link rel="stylesheet" href="https://use.typekit.net/bne7zva.css">
+    <style type="text/css">
+    
+        body {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+            grid-template-rows: ;
+            grid-gap: 20px;
+            background-color: whitesmoke;
+            background-image: url("photos/background_image_texture2.jpg");
+        }
+
+        /* .ui-effects-wrapper {    
+            display: inline-block;
+        } */
+
+        #text2 {
+            grid-column-start: 1;
+            grid-column-end: 3;
+            font-family: poppins, sans-serif;
+            font-weight: 900;
+            font-style: normal;
+            line-height: 30px;
+            margin-bottom: -400px;
+        }
+
+        #text1 {
+            grid-column-start: 1;
+            grid-column-end: 3;
+            font-family: poppins, sans-serif;
+            font-weight: 800;
+            font-style: normal;
+            margin-bottom: -4000px;
+            line-height: 20px;
+            margin-top: 130px;
+        }
+
+        #link1 {
+            text-decoration: none;
+            color: #a80000;
+            font-size: 130%;
+        }
+
+        #link1:hover {
+            color: black;
+        }
+
+        #sound1 {
+            background: black;
+            height:200px;
+            grid-column-start: 4;
+            grid-column-end: 7;
+            border: none;
+        }
+
+        #photo1 {
+            min-width: 100%;
+            max-height: 100%;
+            opacity: 0;
+        }
+
+        #photo1:hover {
+            opacity: 1;
+        }
+
+
+        #sound2 {
+            background: black;
+            height:20px;
+            grid-column-start: 5;
+            grid-column-end: 8;
+            border: none;
+        }
+
+        #photo2 {
+            min-width: 100%;
+            max-height: 100%;
+            opacity: 0;
+        }
+
+        #photo2:hover {
+            opacity: 1;
+        }
+
+        #sound3 {
+            background: black;
+            height: 150px;
+            grid-column-start: 6;
+            grid-column-end: 10;
+            border: none;
+        }
+
+        #photo3 {
+            min-width: 100%;
+            max-height: 100%;
+            opacity: 0;
+        }
+
+        #photo3:hover {
+            opacity: 1;
+        }
+
+        #sound4 {
+            background: black;
+            height: 40px;
+            grid-column-start: 3;
+            grid-column-end: 7;
+            border: none;
+        }
+
+        #photo4 {
+            min-width: 100%;
+            max-height: 100%;
+            opacity: 0;
+        }
+
+        #photo4:hover {
+            opacity: 1;
+        }
+
+        #sound5 {
+            background: black;
+            height: 130px;
+            grid-column-start: 5;
+            grid-column-end: 7;
+            border: none;
+        }
+
+        #photo5 {
+            min-width: 100%;
+            max-height: 100%;
+            opacity: 0;
+        }
+
+        #photo5:hover {
+            opacity: 1;
+        }
+
+        #sound6 {
+            background: black;
+            width: 320px;
+            height: 320px;
+            border-radius: 50%;
+            grid-column-start: 6;
+            grid-column-end: 9;
+            border: none;
+        }
+
+        #photo6 {
+            min-width: 100%;
+            max-height: 100%;
+            border-radius: 50%;
+            opacity: 0;
+        }
+
+        #photo6:hover {
+            opacity: 1;
+        }
+
+        #sound7 {
+            background: black;
+            width: 320px;
+            height: 80px;
+            border-radius: 90%;
+            grid-column-start: 4;
+            grid-column-end: 9;
+            border: none;
+        }
+
+        #photo7 {
+            min-width: 100%;
+            max-height: 100%;
+            border-radius: 50%;
+            opacity: 0;
+        }
+
+        #photo7:hover {
+            opacity: 1;
+        }
+
+        #sound8 {
+            background: black;
+            height: 80px;
+            grid-column-start: 4;
+            grid-column-end: 9;
+            border-radius: 40%;
+            border: none;
+        }
+
+        #photo8 {
+            min-width: 100%;
+            max-height: 100%;
+            border-radius: 40%;
+            opacity: 0;
+        }
+
+        #photo8:hover {
+            opacity: 1;
+        }
+
+        /* #ui-effects-wrapper {    
+            display: inline-block;
+        } */
+
+        #sound9 {
+            background: black;
+            height: 180px;
+            grid-column-start: 5;
+            grid-column-end: 7;
+            border: none;
+        }
+
+        #photo9 {
+            min-width: 100%;
+            max-height: 100%;
+            opacity: 0;
+        }
+
+        #photo9:hover {
+            opacity: 1;
+        }
+
+        #sound10 {
+            background: black;
+            height: 450px;
+            width: 170px;
+            grid-column-start: 6;
+            grid-column-end: 8;
+            border: none;
+        }
+
+        #photo10 {
+            max-width: 100%;
+            min-height: 100%;
+            opacity: 0;
+        }
+
+        #photo10:hover {
+            opacity: 1;
+        }
+
+        #sound11 {
+            background: black;
+            height: 450px;
+            grid-column-start: 4;
+            grid-column-end: 9;
+            border: none;
+        }
+
+        #photo11 {
+            min-width: 100%;
+            max-height: 100%;
+            opacity: 0;
+        }
+
+        #photo11:hover {
+            opacity: 1;
+        }
+
+
+        #oval1 {
+            background: black;
+            height: 150px;
+            grid-column-start: 5;
+            grid-column-end: 9;
+            border-radius: 70%;
+            border: none;
+        }
+
+        #photo12 {
+            min-width: 100%;
+            max-height: 100%;
+            opacity: 0;
+            border-radius: 70%;
+        }
+
+        #photo12:hover {
+            opacity: 1;
+        }
+        
+        #middle_line {
+            background: none;
+            background-image: url("photos/cello_big_1.6.png");
+            background-position: center;
+            height: 2980px;
+            margin-top: -2550px;
+            grid-column: 6;
+            border: none;
+        }
+
+    </style>
+    </head>
+
+
+    <body>
+        <h1 id="text2">PLAY THIS INSTRUMENT AND BECOME THE PERFORMER</h1>
+        <header id="text1">At Judson Hall, New York, Charlotte Moorman played a composition by John Cage called "26 Minutes, one point, 1,499 seconds for a string player". Madeline Charlotte Moorman played cello since the age of ten. She received her master’s degree from Julliard in 1957. She was also a notable performance artist, proud of the fact that composer Edgar Varese called her “The Jeanne d’Arc of new music.” Charlotte was a southern belle born in Little Rock, Arkansas on November 18, 1933. (The same year as Yoko). She succumbed to breast cancer at age 57 on November 8, 1991. All those who knew Charlotte spoke of her beauty, her amazing wit, incredible sense of humor, her generosity toward her colleagues and how deadly serious she was about her art.
+            After a brief time as a classical cellist with the American Symphony Orchestra, Charlotte’s life changed completely when she became roommates in New York City with Yoko Ono in the early 1960s. Her first introduction to Avant Garde music was John Cage’s ‘26 Minutes, 1.1499 Seconds for a String Player’ in which the performer is instructed to cook and eat mushrooms.
+            As founder of the Annual Avant Garde Festival of New York, Charlotte led a never-ending campaign for new music and performance art. The series of fifteen festivals (the final one held in 1980) staged Happenings and various forms of visual arts. They were held at odd locations; Grand Central Station, the Staten Island Ferry, the World Trade Center and at Shea Stadium where Charlotte performed on a flying trapeze. Karl Stockhausen performed at the second festival along with Nam June Paik. Some of the many performers over the years included jazz musicians Ornette Coleman, Cecil Taylor and Sun Ra, the artists Christo and Jon Hendricks, poet Allen Ginsberg, Alison Knowles, Dick Higgins, Joe Jones (who created the musical instruments for Yoko’s 1971 album Fly, and Yoko’s Japanese biographer Takahiko Iimura.
+            Charlotte was a part of Yoko’s first major solo concert at Carnegie Recital Hall in November 1961. She soon performed with John Cage and with founders of the Fluxus movement until she was inexplicably shunned by its founder, George Maciunas. Charlotte often collaborated with Nam June Paik, with whom she merged several art forms including performance and sculpture. For Charlotte, Paik created TV-Cello (1971) an electronic cello made with three stringed television sets (which emitted sounds of static as she bowed across it) and also TV Bra for Living Sculpture (1969) in which Charlotte was naked except for two small television sets attached to her breasts while she played cello.
+            Moorman performed Otto Piene’s Sky Kiss – suspended by helium balloons. She had an ice cello (from which she actually got frostbite) and a chocolate cello (also covered in chocolate herself) both created by Tim McWilliams. One of her pieces had her playing cello under water. But mostly, she insisted on wearing elegant gowns for her performances as a cellist.
+            Charlotte appeared on several American television shows in the 1960s/70s, hosted by the likes of Johnny Carson and Mike Douglas. She was mostly misunderstood and ridiculed, much in the way that Tiny Tim was treated on those same TV shows. However, she played along with their ignorance while maintaining her integrity. She has been described as chaotic and intense.
+            One event led to Charlotte becoming infamously known as the topless cellist. On February 9, 1967 she performed Paik’s Opera Sextronique at New York City’s Film-Makers Cinematheque, co-founded by Jonas Mekas (which later became Anthology Film Archives), playing the cello while nude. Charlotte made the headlines when she was arrested during the second half of the performance. The charges of indecent exposure were later dropped.
+            Moorman had been fighting a decade-long battle with breast cancer since the late 1970s. Despite intense pain and illness, she persevered with unbridled energy, performing throughout the 1980s and generously continuing to help other artists. Charlotte passed away on November 8, 1991, at age 57 in New York City. 
+            <br><br><a href="https://www.youtube.com/watch?v=W3DCxtDzEi0" target="blank" id="link1">ORIGINAL PERFORMANCE</a>
+        </header>
+            <div id="sound1">
+            <img src="photos/1.5.png" id="photo1">
+        </div>
+        <div id="sound2">
+            <img src="photos/3.3.png" id="photo2">
+        </div>
+        <div id="sound3">
+            <img src="photos/4.3.png" id="photo3">
+        </div>
+        <div id="sound4">
+            <img src="photos/5.2.png" id="photo4">
+        </div>
+        <div id="sound5">
+            <img src="photos/6.2.png" id="photo5">
+        </div>
+        <div id="sound6">
+            <img src="photos/7.2.png" id="photo6">
+        </div>
+        <div id="sound7">
+            <img src="photos/8.2.png" id="photo7">
+        </div>
+        <div id="sound8">
+            <img src="photos/9.2.png" id="photo8">
+        </div>
+        <div id="sound9">
+            <img src="photos/10.2.png" id="photo9">
+        </div>
+        <div id="sound10">
+            <img src="photos/11.2.png" id="photo10">
+        </div>
+        <div id="sound11">
+            <img src="photos/12.2.png" id="photo11">
+        </div>
+        <div id="oval1">
+            <img src="photos/pop.2.png" id="photo12">
+        </div>
+        <div id="middle_line"></div>
+
+<!-- audio -->
+
+        <audio id="audio1">
+            <source src="audio/1.m4a" type="audio/mpeg">
+        </audio>
+        <audio id="audio2">
+            <source src="audio/3.m4a" type="audio/mpeg">
+        </audio>   
+        <audio id="audio3">
+            <source src="audio/4.m4a" type="audio/mpeg">
+        </audio>
+        <audio id="audio4">
+            <source src="audio/5.m4a" type="audio/mpeg">
+        </audio>
+        <audio id="audio5">
+            <source src="audio/6.m4a" type="audio/mpeg">
+        </audio> 
+        <audio id="audio6">
+            <source src="audio/7.m4a" type="audio/mpeg">
+        </audio>
+        <audio id="audio7">
+            <source src="audio/8.m4a" type="audio/mpeg">
+        </audio> 
+        <audio id="audio8">
+            <source src="audio/9.m4a" type="audio/mpeg">
+        </audio> 
+        <audio id="audio9">
+            <source src="audio/10.m4a" type="audio/mpeg">
+        </audio> 
+        <audio id="audio10">
+            <source src="audio/11.m4a" type="audio/mpeg">
+        </audio> 
+        <audio id="audio11">
+            <source src="audio/12.m4a" type="audio/mpeg">
+        </audio> 
+        <audio id="pop1">
+            <source src="audio/pop.m4a" type="audio/mpeg">
+        </audio>     
+
+    </body>
+
+<!-- jQuery Library -->
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script
+        src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"
+        integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU="
+        crossorigin="anonymous">
+
+     </script> 
+<!-- JS -->
+     <script>
+
+// sound1
+
+        $("#sound1").click(function(){
+         $('audio#audio1')[0].play()
+    });
+
+    $("#sound1").click(function(){
+         $("#sound1").animate({
+            height: "+=300px",
+            width: "+=300px",
+            backgroundColor: "#d11f20"
+            }, "fast");
+    });
+
+        $("#sound1").click(function(){
+         $("#sound1").animate({
+            height: "-=300px",
+            width: "-=300px",
+            backgroundColor: "black"
+            }, "fast");
+    });
+
+        $("#sound1").click(function(){
+               $("#sound1").effect("shake", {times:4}, 50 );
+            });
+
+
+// middle_line_reverse 
+
+        $("#sound1").click(function(){
+         $("#middle_line").animate({
+            marginTop: "-=250px",
+            }, "fast");
+    });
+        $("#sound1").click(function(){
+         $("#middle_line").animate({
+            marginTop: "+=0px",
+            }, "fast");
+    });
+    
+// end_middle_line_reverse
+
+// sound2
+
+        $("#sound2").click(function(){
+         $('audio#audio2')[0].play()
+    });
+
+        $("#sound2").click(function(){
+         $("#sound2").animate({
+            height: "+=50px",
+            width: "+=400px",
+            backgroundColor: "#d11f20",
+             }, 350);
+    });
+
+
+        $("#sound2").click(function(){
+         $("#sound2").animate({
+            height: "-=50px",
+            width: "-=400px",
+            backgroundColor: "black",
+            }, "fast");
+    });  
+
+        $("#sound2").click(function(){
+         $("#sound2").animate({
+            height: "+=50px",
+            width: "+=400px",
+            backgroundColor: "#e1bb58",
+             }, "fast");
+    });
+
+
+        $("#sound2").click(function(){
+         $("#sound2").animate({
+            height: "-=50px",
+            width: "-=400px",
+            backgroundColor: "black",
+            }, "fast");
+    });  
+
+        $("#sound2").click(function(){
+         $("#sound2").animate({
+            backgroundColor: "black",
+            }, "fast");
+
+    });  
+
+
+// middle_line_reverse 
+
+        $("#sound2").click(function(){
+         $("#middle_line, #sound3").animate({
+            marginTop: "-=30px"
+            }, 350);
+    });
+        $("#sound2").click(function(){
+         $("#middle_line, #sound3").animate({
+            marginTop: "+=30px"
+            }, "fast");
+    });
+
+    $("#sound2").click(function(){
+         $("#middle_line, #sound3").animate({
+            marginTop: "-=30px"
+            }, "fast");
+    });
+        $("#sound2").click(function(){
+         $("#middle_line, #sound3").animate({
+            marginTop: "+=30px"
+            }, "fast");
+    });
+    
+// end_middle_line_reverse
+
+
+// sound3
+
+        $("#sound3").click(function(){
+         $('audio#audio3')[0].play()
+    });
+
+        $("#sound3").click(function(){
+          $("#sound3").effect( "shake", {times:4}, 90 );
+          });
+
+        $(document).ready(function(){
+          $("#sound3").click(function(){
+          var div = $("#sound3");
+          div.animate({marginLeft: '-=420px', marginRight: '+=420px',}, 300);
+          div.animate({marginLeft: '+=420px', marginRight: '-=420px',}, 880);
+          });
+    });
+
+
+// sound4
+
+        $("#sound4").click(function(){
+         $('audio#audio4')[0].play()
+    });
+
+    $("#sound4").click(function(){
+         $("#sound4").animate({
+            width: "-=100px",
+            }, "fast");
+    });
+
+        $("#sound4").click(function(){
+         $("#sound4").animate({
+            width: "+=600px",
+            }, "fast");
+    });
+
+    $("#sound4").click(function(){
+         $("#sound4").animate({
+            width: "-=500px",
+            }, "slow");
+    });
+
+// sound5
+
+    $("#sound5").click(function(){
+         $('audio#audio5')[0].play()
+    });
+
+    $("#sound5").click(function(){
+         $("#sound5").animate({
+            width: "-=100px",
+            borderRadius: "50%",
+            }, "slow");
+    });
+
+        $("#sound5").click(function(){
+         $("#sound5").animate({
+            width: "+=600px",
+            height: "-=100px",
+            backgroundColor: "#e06c00",
+            }, "fast");
+    });
+
+    $("#sound5").click(function(){
+         $("#sound5").animate({
+            width: "-=500px",
+            height: "+=100px",
+            borderRadius: "0%",
+            backgroundColor: "black",
+            }, "slow");
+    });
+
+// sound6
+
+        $("#sound6").click(function(){
+         $('audio#audio6')[0].play()
+    });
+
+        $(document).ready(function(){
+          $("#sound6").click(function(){
+          var div1 = $("#sound6");
+          div1.animate({height: '-=95px', width: '-=95px', marginLeft: '-=420px', marginRight: '+=420px'}, 400);
+          div1.animate({backgroundColor: '#d11f20'}, 25);
+          div1.effect( "shake", {times:70}, 150 );
+          div1.animate({backgroundColor: 'black'}, 100);
+          div1.animate({height: '+=95px', width: '+=95px', marginLeft: '+=420px', marginRight: '-=420px'}, "slow");
+          });
+    });
+
+
+// sound7
+
+        $("#sound7").click(function(){
+         $('audio#audio7')[0].play()
+    });
+
+        $("#sound7").click(function(){
+         $("#sound7").animate({
+            marginLeft: "+=550px",
+            width: "-=320px",
+            height: "+=60px",
+            backgroundColor: "#e1bb58",
+             }, "fast");
+    });
+
+        $("#sound7").click(function(){
+         $("#sound7").animate({
+            marginLeft: "-=550px",
+            width: "+=320px",
+            height: "+=120px",
+            backgroundColor: "#164e71",
+            }, "slow");
+        });
+
+        $("#sound7").click(function(){
+         $("#sound7").animate({
+            height: "-=180px",
+            backgroundColor: "black",
+            }, "fast");
+    });
+
+// middle_line_reverse 
+    
+
+    $("#sound7").click(function(){
+         $("#middle_line").animate({
+            marginTop: "-=60px",
+            }, "fast");
+    });
+        $("#sound7").click(function(){
+         $("#middle_line").animate({
+            marginTop: "-=120px",
+            }, "slow");
+    });
+    
+        $("#sound7").click(function(){
+         $("#middle_line").animate({
+            marginTop: "+=180px",
+            }, "fast");
+    });
+
+// end_middle_line_reverse
+
+// sound8
+
+        $("#sound8").click(function(){
+         $('audio#audio8')[0].play()
+    });
+
+        $(document).ready(function(){
+          $("#sound8").click(function(){
+          var div1 = $("#sound8");
+          div1.animate({marginLeft: '-=420px', marginRight: '+=420px', height: '-=30px', backgroundColor: '#71006e'}, 400);
+          div1.animate({marginLeft: '+=820px', marginRight: '-=820px', height: '+=50px', backgroundColor: '#596b0d'}, 400);
+          div1.animate({backgroundColor: '#bd0000'}, 25);
+          div1.animate({marginLeft: '-=420px', marginRight: '+=420px', height: '-=20px', backgroundColor: 'black'}, "slow");
+          });
+    });
+
+// middle_line_reverse 
+    
+
+    $("#sound8").click(function(){
+         $("#middle_line").animate({
+            marginTop: "+=30px",
+            }, 400);
+    });
+        $("#sound8").click(function(){
+         $("#middle_line").animate({
+            marginTop: "-=50px",
+            }, 400);
+    });
+    
+        $("#sound8").click(function(){
+         $("#middle_line").animate({
+            marginTop: "+=20px",
+            }, "slow");
+    });
+
+// end_middle_line_reverse
+
+// sound9
+
+        $("#sound9").click(function(){
+         $('audio#audio9')[0].play()
+    });
+
+        $(document).ready(function(){
+          $("#sound9").click(function(){
+          var div1 = $("#sound9");
+          div1.animate({backgroundColor: '#e1bb58'}, 10);
+          div1.animate({marginLeft: '+=350px', marginRight: '+=350px', height: '+=150px', width: '+=40px', borderRadius: '50%', backgroundColor: '#512300'}, 1850);
+          div1.effect( "shake", {times:5}, 35 );
+          div1.animate({marginLeft: '-=350px', marginRight: '-=350px', height: '-=150px', width: '-=40px', borderRadius: '0%', backgroundColor: 'black'}, "slow");
+          });
+    });
+
+// middle_line_reverse 
+    
+
+        $(document).ready(function(){
+          $("#sound9").click(function(){
+          var div1 = $("#middle_line");
+          div1.animate({marginTop: '-=150px'}, 1850);
+          div1.animate({marginTop: '+=150px'}, "slow");
+          });
+    });
+
+// end_middle_line_reverse 
+
+// sound10
+
+$("#sound10").click(function(){
+         $('audio#audio10')[0].play()
+    });
+
+        $(document).ready(function(){
+          $("#sound10").click(function(){
+          var div1 = $("#sound10");
+          div1.animate({marginLeft: '-=65px', marginRight: '-=65px', height: '+=250px', width: '-=80px', borderRadius: '50%', backgroundColor: '#a80000'}, 180);
+          div1.animate({marginLeft: '+=65px', marginRight: '+=65px', height: '-=250px', width: '+=80px', borderRadius: '0%', backgroundColor: 'black'}, 800);
+          });
+    });
+
+// middle_line_reverse 
+    
+
+        $(document).ready(function(){
+          $("#sound10").click(function(){
+          var div1 = $("#middle_line");
+          div1.animate({marginTop: '-=250px'}, 180);
+          div1.animate({marginTop: '+=250px'}, 800);
+          });
+    });
+
+// end_middle_line_reverse
+
+// sound11
+
+$("#sound11").click(function(){
+         $('audio#audio11')[0].play()
+    });
+
+        $(document).ready(function(){
+          $("#sound11").click(function(){
+          var div1 = $("#sound11");
+          div1.animate({marginLeft: '+=580px', marginRight: '-=580px', width: '-=140px', opacity: ".5", backgroundColor: '#596b0d'}, 500);
+          div1.animate({marginLeft: '-=147px', marginRight: '+=147px', opacity: '1', backgroundColor: '#a80000'}, 260);
+          div1.animate({marginLeft: '+=150px', marginRight: '-=150px', backgroundColor: '#596b0d'}, 120);
+          div1.animate({marginLeft: '-=580px', marginRight: '+=580px', width: '+=140px', backgroundColor: 'black'}, 1500);
+          });
+    });
+
+// middle_line_reverse 
+    
+
+    //     $(document).ready(function(){
+    //       $("#sound11").click(function(){
+    //       var div1 = $("#middle_line");
+    //       div1.animate({marginTop: '-=250px'}, 100);
+    //       div1.animate({marginTop: '+=250px'}, 800);
+    //       });
+    // });
+
+// end_middle_line_reverse 
+
+
+
+// oval1
+
+        $("#oval1").click(function(){
+         $('audio#pop1')[0].play()
+    });
+
+        $("#oval1").click(function(){
+         $("#oval1").animate({
+            height: "+=80px",
+            backgroundColor: "#e06c00",
+             }, "fast");
+    });
+
+        $("#oval1").click(function(){
+         $("#oval1").animate({
+            height: "-=230px",
+             }, "fast");
+    });
+
+        $("#oval1").click(function(){
+         $("#oval1").animate({
+            height: "+=150px",
+            backgroundColor: "black",
+            }, "slow");
+    });
+
+// middle_line_reverse 
+
+        $("#oval1").click(function(){
+         $("#middle_line").animate({
+            marginTop: "-=80px"
+            }, "fast");
+    });        
+
+        $("#oval1").click(function(){
+         $("#middle_line").animate({
+            marginTop: "+=230px"
+            }, "fast");
+    });
+        $("#oval1").click(function(){
+         $("#middle_line").animate({
+            marginTop: "-=150px"
+            }, "slow");
+    });
+
+// end_middle_line_reverse
+
+     </script>
+
+
+</html>
